@@ -36,3 +36,14 @@ def stations_by_distance(stations,p):
     
     return x
 
+def stations_within_radius(stations,p):
+    distance=[]
+    lengths=[]
+    for station in stations:
+        distance.append((station, haversine(p[0],p[1],station.coord[0],station.coord[1])))
+    for x in range(len(distance)):
+        if distance[2]<10:
+            lengths.append((station, haversine(p[0],p[1],station.coord[0],station.coord[1])))
+    lengths=sorted_by_key(lengths,0)
+
+    return lengths 
