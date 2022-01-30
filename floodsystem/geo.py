@@ -5,10 +5,12 @@
 geographical data.
 
 """
+
+
 from floodsystem.station import MonitoringStation
 from .utils import sorted_by_key  # noqa
 
-from haversine import haversine, km
+from haversine import haversine
 
 
 def stations_by_distance(stations,p):
@@ -16,7 +18,7 @@ def stations_by_distance(stations,p):
     distance=(0,0)
     for station in stations:
         distance = haversine(p,stations.coord)
-    x=sorted_by_key([(stations.name),(stations.town),(distance)]2)
+    x=sorted_by_key([(stations.name),(stations.town),(distance)],2)
     
     return x
 
