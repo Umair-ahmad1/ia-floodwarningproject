@@ -22,5 +22,10 @@ def stations_by_distance(stations,p):
     
     return x
 
+def stations_by_radius(stations,centre,p):
+    for station in stations:
+        if distance <10:
+            #add to list 
+
 
     
