@@ -65,6 +65,16 @@ def rivers_by_station_number(stations, N):
             break
         rivers_output.append(river)
     return rivers_output
+def stations_within_radius(stations,centre,r):
+    distance=[]
+    lengths=[]
+    for station in stations:
+        distance.append((station, haversine(centre[0],centre[1],station.coord[0],station.coord[1])))
+    for x in range(len(distance)):
+        if distance[1]<r:
+            lengths.append((station, haversine(centre[0],centre[1],station.coord[0],station.coord[1])))
+    lengths=sorted_by_key(lengths,0)
 
+    return lengths 
 
 
