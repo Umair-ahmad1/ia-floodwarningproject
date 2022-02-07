@@ -53,6 +53,5 @@ class MonitoringStation:
         for station in stations:
             if station.typical_range_consistent()==False:
                 inconsistent_flowers.append(station.name)
-        inconsistent=sorted_by_key(inconsistent_flowers,0)
         
-        return inconsistent
+        return inconsistent_flowers
