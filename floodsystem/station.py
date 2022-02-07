@@ -43,17 +43,20 @@ class MonitoringStation:
         return d
     
     def typical_range_consistent(self):
-        typical_minimum=self.typical_range[0]
-        typical_maximum=self.typical_range[1]
+        try:
+            typical_minimum=self.typical_range[0]
+            typical_maximum=self.typical_range[1]
+        except TypeError:
+            return False
         if typical_minimum < typical_maximum:
             return True
         else:
             return False
 
-    def inconsistent_typical_range_stations (stations):
-        inconsistent_flowers=[]
-        for station in stations:
-            if station.typical_range_consistent() == False:
+def inconsistent_typical_range_stations(stations):
+    inconsistent_flowers=[]
+    for station in stations:
+        if station.typical_range_consistent() == False:
                 inconsistent_flowers.append(station.name)
         
-        return inconsistent_flowers
+    return inconsistent_flowers
