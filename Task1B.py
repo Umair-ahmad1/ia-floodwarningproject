@@ -11,5 +11,5 @@ for x in range(10):
     print(distances[x][0].name,distances[x][0].town,distances[x][1])
 print("10 furthest away stations")
 for x in range(len(distances)-10, len(distances)):
-    
+    #
     print(distances[x][0].name,distances[x][0].town,distances[x][1])
