@@ -43,15 +43,15 @@ class MonitoringStation:
         return d
     
     def typical_range_consistent(self):
-        if (self.typical_range) >0 :
+        if (self.typical_range) > 0 :
             return True 
-        elif:
+        else:
             return False
 
     def inconsistent_typical_range_stations(stations):
         inconsistent_flowers=[]
         for station in stations:
-            if MonitoringStation.typical_range_consistent(self) = False
+            if MonitoringStation.typical_range_consistent==False:
                 inconsistent_flowers.append(station)
         inconsistent=sorted_by_key(inconsistent_flowers,0)
         
