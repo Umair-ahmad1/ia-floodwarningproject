@@ -12,9 +12,6 @@ from floodsystem.station import MonitoringStation
 from .utils import sorted_by_key  # noqa
 from math import radians, cos, sin, asin, sqrt
 
-<<<<<<< HEAD
-#from haversine import haversine
-=======
 def haversine(lon1, lat1, lon2, lat2):
     
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
@@ -27,9 +24,8 @@ def haversine(lon1, lat1, lon2, lat2):
     r = 6371 # Radius of earth in kilometers.
     return c * r
 
->>>>>>> eaf97a2f951abd1c33c214b110d240e708caed7b
 
-'''
+
 def stations_by_distance(stations,p):
     distance=[]
     for station in stations:
@@ -38,8 +34,6 @@ def stations_by_distance(stations,p):
     
     return x
 
-<<<<<<< HEAD
-'''
 
 
 def rivers_with_station(stations):
@@ -74,16 +68,3 @@ def rivers_by_station_number(stations, N):
 
 
 
-=======
-def stations_within_radius(stations,centre,r):
-    distance=[]
-    lengths=[]
-    for station in stations:
-        distance.append((station, haversine(centre[0],centre[1],station.coord[0],station.coord[1])))
-    for x in range(len(distance)):
-        if distance[1]<r:
-            lengths.append((station, haversine(centre[0],centre[1],station.coord[0],station.coord[1])))
-    lengths=sorted_by_key(lengths,0)
-
-    return lengths 
->>>>>>> eaf97a2f951abd1c33c214b110d240e708caed7b
